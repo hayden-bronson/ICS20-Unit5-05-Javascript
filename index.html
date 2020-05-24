@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <meta name="description" content="My first webpage, with image">
+      <meta name="keywords" content="mths, website">
+      <meta name="author" content="Hayden Bronson">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Another Webpage</title>
+    </head>
+    <body>
+        <p>Enter age and date to see the admissions.</p>
+  <label for="Textbox">Age:</label>
+  <input type="text" id="age" name="age" ><br><br>
+  <label for="Textbox">Day of the week:</label>
+    <select id="day" name="day">
+        <option value="Sunday">Sunday</option>
+      <option value="Monday">Monday</option>
+      <option value="Tuesday">Tuesday</option>
+      <option value="Wednesday">Wednesday</option>
+      <option value="Thursday">Thursday</option>
+      <option value="Friday">Friday</option>
+      <option value="Saturday">Saturday</option>
+    </select>  
+  <br><br>
+    <input type="button" value="Submit Info" onclick="done_info()">
+  <script>
+  function done_info() {
+     let age;
+      let day;
+    age  = parseInt(document.getElementById("age").value);
+          console.log(age);
+    day  = document.getElementById("day").value;
+          console.log(day);
+   if (day == "Saturday" || day == "Sunday") {
+      alert("Time to relax for the weekend!");
+   } else if (age < 18) {
+            alert("Time for school.");
+   } else if (age >= 18) {
+      alert("Time for work.");
+   }   
+  }
+  </script>
+    </body>
+</html>
